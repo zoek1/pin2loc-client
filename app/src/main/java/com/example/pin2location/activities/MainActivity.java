@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     ProgressDialog progress;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         progress = new ProgressDialog(this);
         progress.setTitle("Loading");
         progress.setMessage("Wait while loading...");
+        progress.setCancelable(false);
+        progress.setCanceledOnTouchOutside(false);
         progress.show();
     }
 
