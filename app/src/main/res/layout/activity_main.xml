@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_media_play"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
         fab:fab_colorNormal="@color/colorAccent"
         />
 </FrameLayout>
