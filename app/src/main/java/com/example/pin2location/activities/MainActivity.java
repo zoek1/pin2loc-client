@@ -35,6 +35,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     ProgressDialog progress;
+    TaskRequest task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        TaskRequest task = new TaskRequest();
+        task = new TaskRequest();
         try {
             task.execute(new URL("https://pin2loc.herokuapp.com/locations"));
         } catch (MalformedURLException e) {
@@ -169,4 +170,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        task.cancel(true);
+    }
 }
