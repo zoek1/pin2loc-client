@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pin2location</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">Pin2Location</string>
+</resources>
