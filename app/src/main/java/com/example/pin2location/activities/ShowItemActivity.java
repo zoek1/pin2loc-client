@@ -52,14 +52,9 @@
                     .position(latlng)
                     .title(loc.getProperties().name));
 
-            CameraPosition cp = new CameraPosition.Builder()
-                    .target(latlng)
-                    .zoom(13)
-                    .bearing(90)
-                    .tilt(30)
-                    .build();
 
-            mGoogleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cp));
+            mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng, 14));
+
         }
 
     }
